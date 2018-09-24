@@ -14,10 +14,10 @@
 	"dependencies": {
 		"bootstrap-vue": "^2.0.0-rc.11",
 		"cross-env": "^5.2.0",
-		"nuxt": "^2.0.0",
-		"push-dir": "^0.4.1"
+		"nuxt": "^2.0.0"
 	},
 	"devDependencies": {
-		"nodemon": "^1.11.0"
+		"nodemon": "^1.11.0",
+		"push-dir": "^0.4.1"
 	}
 }
