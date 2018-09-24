@@ -1,5 +1,5 @@
 <template>
-	<nuxt-link :to="'recipes/' + id">
+	<nuxt-link :to="'Recipes/' + id">
 		<div class="recipe">
 			<div class="thumbnail" :style="{'backgroundImage': 'url(' + image + ')'}">
 			</div>
