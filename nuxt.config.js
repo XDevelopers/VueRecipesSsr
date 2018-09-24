@@ -2,7 +2,7 @@ const pkg = require('./package')
 
 module.exports = {
 	mode: 'universal',
-
+	baseUrl: '/VueRedditClone/',
 	/*
 	** Headers of the page
 	*/
