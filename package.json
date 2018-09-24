@@ -5,11 +5,13 @@
 	"author": "jan pungarsek",
 	"private": true,
 	"scripts": {
-		"dev": "nuxt",
+		"copy": "xcopy dist C:\\xampp\\htdocs\\dist /E",
+		"dev": "set NODE_ENV=dev&& nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup"
+		"deploygh": "set NODE_ENV=prod&&npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
+		"deployxamp": "set NODE_ENV=test&& npm run generate && npm run copy"
 	},
 	"dependencies": {
 		"bootstrap-vue": "^2.0.0-rc.11",

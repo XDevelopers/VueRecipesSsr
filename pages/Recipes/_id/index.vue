@@ -45,7 +45,10 @@ export default {
 							image:
 								'https://www.ditchthecarbs.com/wp-content/uploads/2014/02/rsz_bacon_covered_chicken_nuggets-2.jpg',
 						},
-					].find(el => el.id === context.params.id),
+					].find(el => {
+						console.log(context.params.id);
+						return el.id === context.params.id;
+					}),
 				});
 			}, 600);
 		});

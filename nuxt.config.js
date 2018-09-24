@@ -1,9 +1,21 @@
 const pkg = require('./package')
-
+let base = '/';
+if (process.env.NODE_ENV == 'dev') {
+	base = '/'
+	console.log('dev')
+}
+if (process.env.NODE_ENV == 'prod') {
+	console.log('production');
+	base = '/VueRecipesSsr/';
+}
+if (process.env.NODE_ENV == 'test') {
+	base = '/dist/';
+	console.log('test');
+}
 module.exports = {
 	mode: 'universal',
 	router: {
-		base: '/VueRecipesSsr/'
+		base: base,
 	},
 	env: {
 		baseUrl: process.env.BASE_URL || 'http://localhost:3000'
