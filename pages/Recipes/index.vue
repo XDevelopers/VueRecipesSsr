@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<section class="recipes">
-			<Recipe v-for="(recipe, index) in recipes" :key="index" :image="recipe.image" :title="recipe.title" :description="recipe.description" :id="recipe.id">
+			<Recipe v-for="(recipe, index) in data" :key="index" :image="recipe.image" :title="recipe.title" :description="recipe.description" :id="recipe.id">
 			</Recipe>
 		</section>
 	</div>
@@ -11,13 +11,17 @@
 import Recipe from '@/components/Recipe.vue';
 export default {
 	components: { Recipe },
+
+	data() {
+		return {
+			data: this.asyncData,
+		};
+	},
 	asyncData(context) {
 		return new Promise((resolve, reject) => {
-			console.log(context.params.id);
-
 			setTimeout(() => {
 				resolve({
-					recipes: [
+					data: [
 						{
 							id: '1',
 							title: 'Chicken Tikka Masala',

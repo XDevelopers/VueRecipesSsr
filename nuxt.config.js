@@ -3,7 +3,6 @@ const pkg = require('./package')
 module.exports = {
 	mode: 'universal',
 	router: {
-		base: '/VueRecipesSsr/'
 	},
 	env: {
 		baseUrl: process.env.BASE_URL || 'http://localhost:3000'

@@ -1,19 +1,23 @@
 <template>
 	<div class="recipe">
-		<h1 style="color: #343a40;">{{recipe.title}}</h1>
-		<img :src="recipe.image" alt="" srcset="">
-		<h2 style="color: #343a40;">{{recipe.description}}</h2>
+		<h1 style="color: #343a40;">{{data.title}}</h1>
+		<img :src="data.image" alt="" srcset="">
+		<h2 style="color: #343a40;">{{data.description}}</h2>
 	</div>
 </template>
 <script>
 export default {
+	data() {
+		return {
+			data: this.asyncData,
+		};
+	},
 	// https://nuxtjs.org/api/context/
 	asyncData(context) {
 		return new Promise((resolve, reject) => {
-			console.log(context.params.id);
 			setTimeout(() => {
 				resolve({
-					recipe: [
+					data: [
 						{
 							id: '1',
 							title: 'Chicken Tikka Masala',
