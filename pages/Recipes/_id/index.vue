@@ -7,10 +7,18 @@
 </template>
 <script>
 export default {
-	data() {
+	data: function() {
 		return {
-			data: this.asyncData,
+			data: {},
 		};
+	},
+	created: function() {
+		console.log('created');
+		console.log(this.recipe);
+	},
+	mounted: function() {
+		console.log($route.params.id);
+		console.log('mounted');
 	},
 	// https://nuxtjs.org/api/context/
 	asyncData(context) {
@@ -51,6 +59,9 @@ export default {
 					}),
 				});
 			}, 600);
+		}).then(res => {
+			console.log(res);
+			return { data: res.data };
 		});
 	},
 };

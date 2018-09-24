@@ -14,7 +14,7 @@ export default {
 
 	data() {
 		return {
-			data: this.asyncData,
+			data: {},
 		};
 	},
 	asyncData(context) {

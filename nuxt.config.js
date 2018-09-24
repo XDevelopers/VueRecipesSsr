@@ -18,7 +18,7 @@ module.exports = {
 		base: base,
 	},
 	env: {
-		baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+		baseUrl: `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
 	},
 	/*
 	** Headers of the page
