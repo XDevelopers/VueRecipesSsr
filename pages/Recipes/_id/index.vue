@@ -17,7 +17,6 @@ export default {
 		console.log(this.recipe);
 	},
 	mounted: function() {
-		console.log($route.params.id);
 		console.log('mounted');
 	},
 	// https://nuxtjs.org/api/context/

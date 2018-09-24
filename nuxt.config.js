@@ -109,7 +109,7 @@ module.exports = {
 				return res.data.map((recipe) => {
 					console.log(recipe);
 
-					return '/recipes/' + recipe.id
+					return  base + 'recipes/' + recipe.id
 				})
 			})
 		}
