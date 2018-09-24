@@ -1,5 +1,5 @@
 <template>
-	<nuxt-link :to="'VueRecipesSsr/Recipes/' + id">
+	<nuxt-link :to="'recipes/' + id">
 		<div class="recipe">
 			<div class="thumbnail" :style="{'backgroundImage': 'url(' + image + ')'}">
 			</div>
@@ -24,7 +24,6 @@ export default {
 </script>
 <style scoped>
 .recipe {
-	box-sizing: border-box;
 	border: 1px solid #2b2b2b;
 	box-shadow: 2px 5px 5px #505050;
 	width: 300px;

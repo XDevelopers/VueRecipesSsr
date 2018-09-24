@@ -2,7 +2,9 @@ const pkg = require('./package')
 
 module.exports = {
 	mode: 'universal',
-	baseUrl: '/VueRecipesSsr/',
+	env: {
+		baseUrl: process.env.BASE_URL || '/ VueRecipesSsr /'
+	},
 	/*
 	** Headers of the page
 	*/
