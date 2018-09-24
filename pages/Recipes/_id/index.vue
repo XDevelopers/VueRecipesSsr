@@ -14,10 +14,6 @@ export default {
 	},
 	created: function() {
 		console.log('created');
-		console.log(this.recipe);
-	},
-	mounted: function() {
-		console.log('mounted');
 	},
 	// https://nuxtjs.org/api/context/
 	asyncData(context) {
@@ -53,7 +49,6 @@ export default {
 								'https://www.ditchthecarbs.com/wp-content/uploads/2014/02/rsz_bacon_covered_chicken_nuggets-2.jpg',
 						},
 					].find(el => {
-						console.log(context.params.id);
 						return el.id === context.params.id;
 					}),
 				});

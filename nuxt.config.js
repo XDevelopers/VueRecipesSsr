@@ -106,10 +106,15 @@ module.exports = {
 					],
 				});
 			}).then((res) => {
-				return res.data.map((recipe) => {
-					console.log(recipe);
+				console.log(res, 'res');
+				console.log(res.data[0].title, 'res.data[0].title');
 
-					return  base + 'recipes/' + recipe.id
+				return res.data.map((recipe) => {
+					console.log(recipe.title, 'title');
+					console.log(recipe.id, 'id');
+
+
+					return `/recipes/${recipe.id}`;
 				})
 			})
 		}
