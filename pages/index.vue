@@ -1,9 +1,9 @@
 <template>
 	<section class="container">
 		<div>
-			<logo/>
+			<logo />
 			<h1 class="title">
-				vuessr2
+				vuessr
 			</h1>
 			<h2 class="subtitle">
 				My astounding Nuxt.js project

@@ -14,6 +14,7 @@
 		"deployxamp": "set NODE_ENV=test&& npm run generate && npm run copy"
 	},
 	"dependencies": {
+		"@nuxtjs/axios": "^5.3.2",
 		"bootstrap-vue": "^2.0.0-rc.11",
 		"cross-env": "^5.2.0",
 		"nuxt": "^2.0.0"
