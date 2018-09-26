@@ -5,7 +5,7 @@
 	"author": "jan",
 	"private": true,
 	"scripts": {
-		"copy": "xcopy dist C:\\xampp\\htdocs\\dist /E",
+		"copy": "xcopy /Y dist C:\\xampp\\htdocs\\dist",
 		"dev": "set NODE_ENV=dev&& nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
