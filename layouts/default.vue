@@ -12,7 +12,20 @@
 	</div>
 </template>
 <script>
-export default {};
+export default {
+	data: () => {
+		return {
+			drawer: false,
+		  clipped: true,
+		  miniVariant: false,
+		}
+	},
+	methods: {
+		cli: function() {
+			alert('cfrefgs');
+		}
+	}
+};
 </script>
 
 <style>

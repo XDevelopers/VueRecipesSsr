@@ -19,7 +19,6 @@ export default {
 	// https://nuxtjs.org/api/context/
 	asyncData(context) {
 		return axios.get(`http://localhost:3001/recipes/${context.params.id}`).then(res => {
-			console.log(res);
 			return { data: res.data };
 		});
 	},
@@ -27,8 +26,6 @@ export default {
 </script>
 <style scoped>
 .recipe {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-items: center;
 	margin: 20px;
