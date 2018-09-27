@@ -7,24 +7,16 @@
 					<b-nav-item to="/recipes/">Recipes</b-nav-item>
 				</b-navbar-nav>
 			</b-navbar>
-			<nuxt/>
+			<nuxt />
 		</div>
 	</div>
 </template>
 <script>
 export default {
 	data: () => {
-		return {
-			drawer: false,
-		  clipped: true,
-		  miniVariant: false,
-		}
+		return {};
 	},
-	methods: {
-		cli: function() {
-			alert('cfrefgs');
-		}
-	}
+	methods: {}
 };
 </script>
 

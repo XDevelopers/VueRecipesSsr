@@ -1,4 +1,4 @@
-import Vuex from 'vuex'
+import Vuex from 'vuex';
 
 const createStore = () => {
 	return new Vuex.Store({
@@ -8,10 +8,9 @@ const createStore = () => {
 		mutations: {
 			change(state) {
 				state.drawer = !state.drawer;
-
 			}
 		}
-	})
-}
+	});
+};
 
-export default createStore
+export default createStore;

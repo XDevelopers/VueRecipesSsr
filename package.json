@@ -5,22 +5,29 @@
 	"author": "jan",
 	"private": true,
 	"scripts": {
-		"copy": "xcopy /Y dist C:\\xampp\\htdocs\\dist",
+		"copy": "xcopy dist C:\\xampp\\htdocs\\dist /s /Y /exclude:excludes.txt",
 		"dev": "set NODE_ENV=dev&& nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"deploygh": "set NODE_ENV=prod&&npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
-		"deployxamp": "set NODE_ENV=test&& npm run generate && npm run copy"
+		"deploygh": "set NODE_ENV=prod&& npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
+		"deployxamp": "set NODE_ENV=test&& npm run generate && npm run copy",
+		"lint": "./node_modules/.bin/eslint --fix ./*"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.3.2",
 		"@nuxtjs/vuetify": "^0.4.2",
+		"babel-eslint": "^10.0.0",
 		"bootstrap-vue": "^2.0.0-rc.11",
 		"cross-env": "^5.2.0",
-		"nuxt": "^2.0.0"
+		"eslint-config-prettier": "^3.1.0",
+		"nuxt": "^2.0.0",
+		"prettier": "^1.14.3"
 	},
 	"devDependencies": {
+		"eslint": "^5.6.0",
+		"eslint-plugin-prettier": "^2.6.2",
+		"eslint-plugin-vue": "^5.0.0-beta.3",
 		"nodemon": "^1.11.0",
 		"push-dir": "^0.4.1"
 	}
