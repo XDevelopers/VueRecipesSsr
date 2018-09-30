@@ -12,7 +12,7 @@
 		"generate": "nuxt generate",
 		"deploygh": "set NODE_ENV=prod&& npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
 		"deployxamp": "set NODE_ENV=test&& npm run generate && npm run copy",
-		"lint": "./node_modules/.bin/eslint --ignore-pattern '/*.md' *.js"
+		"lint": "./node_modules/.bin/eslint --fix --ignore-pattern '/*.md' *.js"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.3.2",
